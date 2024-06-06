@@ -40,7 +40,7 @@ config.devServer = {
   "static": [
     "kotlin",
     "../../../../composeApp/build/processedResources/wasmJs/main",
-    "/Users/user/elisa/Elisa-Kirja/composeApp"
+    "/Users/arshiasaleem/Desktop/Elisa-Kirja/composeApp"
   ],
   "client": {
     "overlay": {
@@ -49,20 +49,6 @@ config.devServer = {
     }
   }
 };
-
-// Report progress to console
-// noinspection JSUnnecessarySemicolon
-;(function(config) {
-    const webpack = require('webpack');
-    const handler = (percentage, message, ...args) => {
-        const p = percentage * 100;
-        let msg = `${Math.trunc(p / 10)}${Math.trunc(p % 10)}% ${message} ${args.join(' ')}`;
-        msg = msg.replace(require('path').resolve(__dirname, "../.."), '');;
-        console.log(msg);
-    };
-
-    config.plugins.push(new webpack.ProgressPlugin(handler))
-})(config);
 
 // noinspection JSUnnecessarySemicolon
 ;(function(config) {

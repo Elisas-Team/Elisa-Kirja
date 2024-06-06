@@ -7,7 +7,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -59,11 +61,11 @@ class HomeScreen : Screen {
         //main ui of the page
         LazyColumn(Modifier.fillMaxHeight().background(MaterialTheme.colors.background)) {
             item {
-                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(Modifier.fillMaxHeight().aspectRatio(2f), horizontalAlignment = Alignment.CenterHorizontally) {
                     AnimatedVisibility(visible = showContent) {
                         val greeting = remember { Greeting().greet() }
                         Row(
-                            Modifier.fillMaxWidth()
+                            Modifier.fillMaxSize()
                                 .background(color = customColors.secondaryBackground)
                                 .padding(horizontal = 42.dp),
                             verticalAlignment = Alignment.CenterVertically
@@ -123,11 +125,10 @@ class HomeScreen : Screen {
                 }
             }
             if (showContent && !isLoading) {
-                    items(Greeting().getBookCategories()) { category ->
-                        BookUI().categoryItem(category)
-                    }
+                items(Greeting().getBookCategories()) { category ->
+                    BookUI().categoryItem(category)
+                }
             }
         }
     }
 }
-
