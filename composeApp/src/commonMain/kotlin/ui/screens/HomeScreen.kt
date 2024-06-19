@@ -59,7 +59,6 @@ import wasmdemo.composeapp.generated.resources.audiobook
 
 @OptIn(ExperimentalResourceApi::class)
 class HomeScreen : Screen {
-    @OptIn(ExperimentalAnimationApi::class)
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
@@ -68,7 +67,7 @@ class HomeScreen : Screen {
         var currentIndex by remember() { mutableStateOf(1) }
         val allBooks = rememberSaveable() { mutableStateOf<List<BookContainer?>>(emptyList()) }
         // a cachedBooks state to store the fetched data
-        var cachedBooks by rememberSaveable {
+        val cachedBooks by rememberSaveable {
             mutableStateOf<MutableMap<Int, List<BookContainer?>>>(
                 mutableMapOf()
             )
@@ -80,17 +79,6 @@ class HomeScreen : Screen {
             listState
         )
         val coroutineScope = rememberCoroutineScope()
-        //animation variables
-        val infiniteTransition = rememberInfiniteTransition()
-        val dy by infiniteTransition.animateFloat(
-            initialValue = 0f,
-            targetValue = 1f,
-            animationSpec = infiniteRepeatable(
-                animation = tween(1000, easing = LinearEasing),
-                repeatMode = RepeatMode.Reverse
-            )
-        )
-        val travelDistance = with(LocalDensity.current) { 40.dp.toPx() }
 
         // Observe the allBooks state flow and update the UI when data is loaded
         LaunchedEffect(screenModel.allBooks) {
@@ -104,7 +92,6 @@ class HomeScreen : Screen {
                 }
             }
         }
-
         LaunchedEffect(screenModel.isNewBooksAdded) {
             screenModel.isNewBooksAdded.collect { isNew ->
                 if (isNew != null) {
@@ -112,6 +99,18 @@ class HomeScreen : Screen {
                 }
             }
         }
+
+        //animation variables
+        val infiniteTransition = rememberInfiniteTransition()
+        val dy by infiniteTransition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = infiniteRepeatable(
+                animation = tween(1000, easing = LinearEasing),
+                repeatMode = RepeatMode.Reverse
+            )
+        )
+        val travelDistance = with(LocalDensity.current) { 40.dp.toPx() }
 
         // Main UI of the page
         LazyColumn(

@@ -20,8 +20,8 @@
     "d23db886594f58b61138d553dc2cf4d3": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-wasm-js/3.0.0-wasm2/79dde043940e3f9420fb41aeb2d131591127edd3/ktor-io-wasm-js-3.0.0-wasm2.klib"
     },
-    "61108da20006a4cceb8e0b4753db9320": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-wasm-js/1.8.0/6fa5af0c703e4957c811aef817336eb6f6572e72/kotlinx-coroutines-core-wasm-js-1.8.0.klib"
+    "dba888e62a0e1cfcd751e725da3ab2d2": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-wasm-js/1.8.1/6379adf2812bea0a894ee866456b02337c5cf944/kotlinx-coroutines-core-wasm-js-1.8.1.klib"
     },
     "1c6fc0b4d51e510c7517b56b13805943": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-wasm-js/0.23.2/f7046e9f5ce6014c3471098284bd654831bb1f41/atomicfu-wasm-js-0.23.2.klib"
@@ -95,6 +95,14 @@
     "e5694f42dd8a38594a241cab01b40ca2": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-util-wasm-js/1.6.0/aa68c98868b44b79aef6e1c7101a3a79c4a26650/ui-util-wasm-js-1.6.0.klib"
     },
+    "e8278e1ca2b2c61789a2014b416ebbfa": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-wasm-js/0.7.93/4e0d16e0dbd09686c155ce37341b0d6dd7dc6ba5/skiko-wasm-js-0.7.93.klib",
+      "target": "skiko-wasm-js/0.7.93"
+    },
+    "5f8c396c611dba6f31ce6325345f9730": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-js-wasm-runtime/0.7.93/7aab65f777796ce91617702ef0a26d40d93ffdc3/skiko-js-wasm-runtime-0.7.93.jar",
+      "target": "skiko-js-wasm-runtime/0.7.93"
+    },
     "fa0c5f5cd0ecbbeaf1f8adfa6206fbbd": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-saveable-wasm-js/1.6.0/6327ebeb068ea240e27c591c59b91b9baa272ff1/runtime-saveable-wasm-js-1.6.0.klib"
     },
@@ -111,17 +119,24 @@
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-datetime-wasm-js/0.5.0/629555641f7616da6dd028fae163a288a0e28264/kotlinx-datetime-wasm-js-0.5.0.klib",
       "target": "Kotlin-DateTime-library-kotlinx-datetime-wasm-js/0.5.0"
     },
+    "1a43adc46a52cf559bd1bf8ac339d728": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-resources-wasmJs/1.6.0/200eacab136558b32794e153bb2779bc2fe2e82/library-wasm-js-1.6.0.klib",
+      "target": "components-resources-wasmJs/1.6.0"
+    },
     "4a22f4116b5f75eb813960d66951d3b7": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-ui-tooling-preview-wasmJs/1.6.0/1b163f7f7974363211a06ff60a82ccbde64ee398/library-wasm-js-1.6.0.klib"
     },
-    "dbe02e5f765148aa94c8aaabf0d17873": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-navigator-wasm-js/1.1.0-alpha04/ddd430cdf092b0cfbf19b218bb6c16780fce9283/voyager-navigator-wasm-js-1.1.0-alpha04.klib"
+    "d60b03b8a81aaddba46f6c97867e6762": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-navigator-wasm-js/1.1.0-beta02/2ad56d1f70a5e81fbe13491060cc23b4cdea70a1/voyager-navigator-wasm-js-1.1.0-beta02.klib"
     },
-    "f2f71f85658ffdf7cb0f983dba3761dc": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-core-wasm-js/1.1.0-alpha04/354dda74abf60b07bc9c0c7f41068267bbfa22ae/voyager-core-wasm-js-1.1.0-alpha04.klib"
+    "63c7bd0df0a55c895f33d61026653340": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-core-wasm-js/1.1.0-beta02/4ab9f255344b79131af40bbc373717261e60199d/voyager-core-wasm-js-1.1.0-beta02.klib"
     },
     "4715e426e639e602146b21a902d663ee": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/com.benasher44/uuid-wasm-js/0.8.2/a8a9c7946accb66474de927b4485a3ee4dd28717/uuid-wasm-js-0.8.2.klib"
+    },
+    "19b6a0beece42e6bd4904e9d423fb82e": {
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-screenmodel-wasm-js/1.1.0-beta02/1a3a9d81c4301d6144b4b02df7d5ac1cc7003060/voyager-screenmodel-wasm-js-1.1.0-beta02.klib"
     },
     "a2e0bd199bdaf9aa43f5fad560f2ddee": {
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/io.coil-kt.coil3/coil-compose-wasm-js/3.0.0-alpha06/835a04365a2f8649fc9b43ac779090bb48f23dfc/coil-compose-wasm-js-3.0.0-alpha06.klib",
@@ -150,33 +165,9 @@
       "src": "/Users/user/.gradle/caches/modules-2/files-2.1/io.coil-kt.coil3/coil-network-core-wasm-js/3.0.0-alpha06/b95ee257843d5833380d094d9544dbd8e1f27078/coil-network-core-wasm-js-3.0.0-alpha06.klib",
       "target": "coil-network-core-wasm-js/3.0.0-alpha06"
     },
-    "e8278e1ca2b2c61789a2014b416ebbfa": {
-      "src": "/Users/wisdomkalu/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-wasm-js/0.7.93/4e0d16e0dbd09686c155ce37341b0d6dd7dc6ba5/skiko-wasm-js-0.7.93.klib",
-      "target": "skiko-wasm-js/0.7.93"
-    },
-    "5f8c396c611dba6f31ce6325345f9730": {
-      "src": "/Users/wisdomkalu/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-js-wasm-runtime/0.7.93/7aab65f777796ce91617702ef0a26d40d93ffdc3/skiko-js-wasm-runtime-0.7.93.jar",
-      "target": "skiko-js-wasm-runtime/0.7.93"
-    },
-    "1a43adc46a52cf559bd1bf8ac339d728": {
-      "src": "/Users/wisdomkalu/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-resources-wasmJs/1.6.0/200eacab136558b32794e153bb2779bc2fe2e82/library-wasm-js-1.6.0.klib",
-      "target": "components-resources-wasmJs/1.6.0"
-    },
     "a66860f155cb10a237acb5f7d0f6d0e3": {
-      "src": "/Users/wisdomkalu/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.22/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.22.jar",
+      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.22/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.22.jar",
       "target": "kotlin-test-js-runner/0.0.1"
-    },
-    "dba888e62a0e1cfcd751e725da3ab2d2": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-wasm-js/1.8.1/6379adf2812bea0a894ee866456b02337c5cf944/kotlinx-coroutines-core-wasm-js-1.8.1.klib"
-    },
-    "d60b03b8a81aaddba46f6c97867e6762": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-navigator-wasm-js/1.1.0-beta02/2ad56d1f70a5e81fbe13491060cc23b4cdea70a1/voyager-navigator-wasm-js-1.1.0-beta02.klib"
-    },
-    "63c7bd0df0a55c895f33d61026653340": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-core-wasm-js/1.1.0-beta02/4ab9f255344b79131af40bbc373717261e60199d/voyager-core-wasm-js-1.1.0-beta02.klib"
-    },
-    "19b6a0beece42e6bd4904e9d423fb82e": {
-      "src": "/Users/user/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-screenmodel-wasm-js/1.1.0-beta02/1a3a9d81c4301d6144b4b02df7d5ac1cc7003060/voyager-screenmodel-wasm-js-1.1.0-beta02.klib"
     }
   }
 }

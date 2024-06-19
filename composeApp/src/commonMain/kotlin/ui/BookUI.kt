@@ -1,6 +1,5 @@
 package ui
 
-import API.BooksService
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -58,10 +57,8 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import kotlinx.coroutines.async
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
-import models.AllBooksContainer
+import models.AllBooksData
 import models.BookCategory
 import models.BookContainer
 import models.Books
@@ -94,7 +91,7 @@ class BookUI {
 
         AnimatedVisibility(
             visible = true,
-            enter = slideInHorizontally() + expandIn (
+            enter = slideInHorizontally() + expandIn(
                 // Expand from the top.
                 expandFrom = Alignment.CenterStart
             ) + fadeIn(
@@ -200,7 +197,7 @@ class BookUI {
             Spacer(Modifier.height(24.dp).background(MaterialTheme.colors.background))
             androidx.compose.animation.AnimatedVisibility(
                 visible = showContent,
-                enter = fadeIn (
+                enter = fadeIn(
                     animationSpec = tween(
                         durationMillis = 500,
                         easing = LinearOutSlowInEasing,
@@ -213,7 +210,7 @@ class BookUI {
             Spacer(Modifier.height(12.dp).background(MaterialTheme.colors.background))
             androidx.compose.animation.AnimatedVisibility(
                 visible = showContent,
-                enter = fadeIn (
+                enter = fadeIn(
                     animationSpec = tween(
                         durationMillis = 500,
                         easing = LinearOutSlowInEasing,
@@ -273,34 +270,11 @@ class BookUI {
     }
 
     @Composable
-    fun allBooksItem() {
-        val bookContainers = remember { mutableStateOf<AllBooksContainer?>(null) }
-        var isLoading by remember { mutableStateOf(true) }
-        // Fetch book data with LaunchedEffect
-        LaunchedEffect("all_books") {
-            val books = coroutineScope {
-                async {
-                    BooksService().retrieveAllBooksOfCategory("483")
-                }
-            }
-            bookContainers.value = books.await()
-            isLoading = false
-        }
-        if (isLoading) {
-            repeat(1) {
-//                Shimmer().ShimmerPlaceholder()
-                Column(
-                    Modifier.fillMaxWidth().fillMaxHeight(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
-                    LoadingEffect().LoadingAnimation()
-                }
-            }
-        } else {
-            if (bookContainers != null) {
-                val list = bookContainers.value?.record?.books
-                list?.let { books ->
+    fun allBooksItem(books: AllBooksData?) {
+        if (books != null) {
+            if (books.books.isNotEmpty()) {
+                val list = books.books
+                list.let { books ->
                     LazyVerticalGrid(
                         columns = GridCells.Adaptive(minSize = 250.dp),
                         content = {
@@ -312,8 +286,14 @@ class BookUI {
                         }
                     )
                 }
-                Text("data fetching")
-                // Show a loading indicator or an error message
+            }
+        } else {
+            Column(
+                Modifier.fillMaxWidth().fillMaxHeight(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                LoadingEffect().LoadingAnimation()
             }
         }
     }

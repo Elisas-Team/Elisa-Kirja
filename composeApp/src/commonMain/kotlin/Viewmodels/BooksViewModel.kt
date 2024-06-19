@@ -44,9 +44,9 @@ class BooksViewModel() : ScreenModel {
         }
     }
 
-    private fun fetchData(userId: String, currentIndex: Int) {
+    private fun fetchData(bookId: String, currentIndex: Int) {
         screenModelScope.launch {
-            val response = apiService.retrieveBooksFromAPI(userId)
+            val response = apiService.retrieveBooksFromAPI(bookId)
             val fetchedBooks = response?.book
             val bookContainers = listOf(fetchedBooks?.let { BookContainer(it) })
             cachedBooks[currentIndex] = bookContainers
